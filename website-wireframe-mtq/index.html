@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe - Kompetisi Labbbaik</title>
+
+  <!-- PEMANGGILAN FILE CSS: mengatur tampilan wireframe -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PEMANGGILAN FILE JAVASCRIPT: mengatur interaksi sederhana -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- BAGIAN 1: HEADER DAN NAVIGASI -->
+  <header class="site-header">
+    <div class="logo-placeholder">LOGO UKM LABBBAIK</div>
+    <div class="brand-text">
+      <strong>UKM LABBBAIK</strong>
+      <span>Unit Kegiatan Mahasiswa</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#beranda">Halaman Utama</a>
+      <a href="#info">Info UKM</a>
+      <a href="#kompetisi" class="active">Kompetisi</a>
+      <a href="#keuangan">Keuangan</a>
+      <a href="#aspirasi">Aspirasi</a>
+      <a href="#dokumentasi">Dokumentasi</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BAGIAN 2: BANNER / HERO KOMPETISI -->
+    <section class="hero" id="kompetisi">
+      <div class="hero-copy">
+        <p class="eyebrow">POSTER TERBARU</p>
+        <h1>Musabaqah Tilawatil Qur'an Tingkat Nasional 2025</h1>
+        <p>Ajang bergengsi tahunan untuk para qori dan qoriah terbaik se-Indonesia.</p>
+        <div class="event-meta">
+          <span>15 Jan – 28 Feb 2025</span>
+          <span>Jakarta, Indonesia</span>
+        </div>
+      </div>
+      <div class="hero-image placeholder">AREA GAMBAR BANNER</div>
+    </section>
+
+    <!-- BAGIAN 3: JUDUL DAN FILTER KOMPETISI -->
+    <section class="competition-section">
+      <div class="section-heading">
+        <h2>Kompetisi Labbbaik</h2>
+        <p>Temukan dan ikuti kompetisi yang tersedia.</p>
+      </div>
+
+      <div class="filter-panel">
+        <div class="filter-status">FILTER AKTIF: <strong id="filterCount">0</strong></div>
+        <div class="filter-grid">
+          <label>
+            Kata kunci
+            <input type="search" id="keyword" placeholder="Cari kompetisi...">
+          </label>
+          <label>
+            Dari tanggal
+            <input type="date" id="dateFrom">
+          </label>
+          <label>
+            Sampai tanggal
+            <input type="date" id="dateTo">
+          </label>
+        </div>
+        <div class="filter-actions">
+          <button type="button" id="searchButton">Cari</button>
+          <button type="button" class="secondary-button" id="resetButton">Reset</button>
+        </div>
+      </div>
+
+      <!-- BAGIAN 4: HASIL DAN KARTU KOMPETISI -->
+      <p class="result-count">Tersedia <strong id="resultCount">1</strong> kompetisi</p>
+      <article class="competition-card" id="competitionCard">
+        <div class="card-poster placeholder">AREA POSTER KOMPETISI</div>
+        <div class="card-content">
+          <div class="card-topline">
+            <span class="status-label">PENDAFTARAN DIBUKA</span>
+            <span class="date-label">15 Jan – 28 Feb 2025</span>
+          </div>
+          <h3>MTQ Nasional</h3>
+          <p class="small-meta">Jakarta, Indonesia · Peserta umum</p>
+          <p>Deskripsi singkat mengenai kompetisi, persyaratan peserta, dan informasi pendaftaran.</p>
+          <div class="timeline">
+            <div><strong>15 Jan</strong><span>Pendaftaran</span></div>
+            <div><strong>1 Feb</strong><span>Seleksi</span></div>
+            <div><strong>28 Feb</strong><span>Final</span></div>
+          </div>
+          <div class="card-actions">
+            <button type="button" class="secondary-button">Guide Book</button>
+            <button type="button">Daftar</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- BAGIAN 5: INFORMASI TAMBAHAN -->
+    <section class="notice-strip">
+      <strong>INFORMASI:</strong>
+      <span>Pastikan membaca ketentuan kompetisi sebelum melakukan pendaftaran.</span>
+    </section>
+  </main>
+
+  <!-- BAGIAN 6: FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div>
+        <div class="footer-logo placeholder">LOGO</div>
+        <h2>UKM LABBBAIK</h2>
+        <p>Unit Kegiatan Mahasiswa di Politeknik Negeri Jember.</p>
+        <p>Alamat sekretariat UKM / kampus.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <a href="#beranda">Halaman Utama</a>
+        <a href="#info">Info UKM</a>
+        <a href="#kompetisi">Kompetisi</a>
+        <a href="#keuangan">Keuangan</a>
+      </div>
+      <div>
+        <h3>Ikuti Kami</h3>
+        <span>Instagram · WhatsApp · YouTube</span>
+        <span>Email · X · Telepon</span>
+      </div>
+    </div>
+    <div class="copyright">© 2025 UKM Labbbaik. Seluruh hak cipta dilindungi.</div>
+  </footer>
+</body>
+</html>
