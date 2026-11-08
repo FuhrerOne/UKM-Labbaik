@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKM LABBAIK - Halaman Utama</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Menggunakan font sans-serif bersih */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- ==========================================
+         1. HEADER & NAVBAR (RATA KANAN KESAMPING)
+         ========================================== -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo & Brand (Kiri) -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-black text-white flex items-center justify-center font-bold text-xs rounded border border-yellow-400">
+                    LABBAIK
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight text-gray-900">UKM LABBAIK</h1>
+                    <p class="text-xs text-gray-500">Unit Kegiatan Mahasiswa</p>
+                </div>
+            </div>
+
+            <!-- Navigasi Mendatar Rata Kanan (Desktop) -->
+            <nav class="hidden md:flex items-center">
+                <!-- 
+                  ===================================================
+                  [SLOT KUSTOM NAVIGASI DESKTOP] 
+                  Kamu bisa ganti/tambah link menu di dalam container ini
+                  ===================================================
+                -->
+                <div class="bg-[#FFFBE6] border border-[#F6E05E]/40 rounded-full px-3 py-1.5 flex items-center space-x-1 lg:space-x-2 shadow-sm">
+                    <a href="#" class="px-3 py-1.5 text-xs lg:text-sm font-medium text-gray-800 rounded-full bg-white shadow-sm hover:bg-yellow-50 transition">Halaman Utama</a>
+                    <a href="#" class="px-3 py-1.5 text-xs lg:text-sm font-medium text-gray-700 hover:text-black rounded-full hover:bg-yellow-100/50 transition">Info UKM</a>
+                    <a href="#" class="px-3 py-1.5 text-xs lg:text-sm font-medium text-gray-700 hover:text-black rounded-full hover:bg-yellow-100/50 transition">Keuangan</a>
+                    <a href="#" class="px-3 py-1.5 text-xs lg:text-sm font-medium text-gray-700 hover:text-black rounded-full hover:bg-yellow-100/50 transition">Aspirasi</a>
+                    <a href="#" class="px-3 py-1.5 text-xs lg:text-sm font-medium text-gray-700 hover:text-black rounded-full hover:bg-yellow-100/50 transition">Dokumentasi</a>
+                </div>
+                <!-- [AKHIR SLOT KUSTOM NAVIGASI DESKTOP] -->
+            </nav>
+
+            <!-- Tombol Mobile Menu (Hanya muncul saat layar HP) -->
+            <div class="md:hidden flex items-center">
+                <button type="button" class="text-gray-700 hover:text-black focus:outline-none p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#FFFBE6] border-b border-yellow-200 px-4 pt-2 pb-4 space-y-2">
+            <!-- 
+              ===================================================
+              [SLOT KUSTOM NAVIGASI MOBILE] 
+              ===================================================
+            -->
+            <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-900 bg-white rounded-md">Halaman Utama</a>
+            <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-yellow-100 rounded-md">Info UKM</a>
+            <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-yellow-100 rounded-md">Keuangan</a>
+            <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-yellow-100 rounded-md">Aspirasi</a>
+            <a href="#" class="block px-3 py-2 text-sm font-medium text-gray-700 hover:bg-yellow-100 rounded-md">Dokumentasi</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- ==========================================
+             2. HERO SECTION
+             ========================================== -->
+        <section class="relative bg-neutral-900 text-white py-20 md:py-32 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center overflow-hidden">
+            <!-- Overlay Latar Belakang Gambar -->
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=1600&auto=format&fit=crop');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+            <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+                <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-yellow-300 drop-shadow-md">
+                    UKM LABBAIK
+                </h2>
+                
+                <div>
+                    <span class="inline-block bg-white/20 backdrop-blur-md text-white text-xs md:text-sm px-4 py-1.5 rounded-full border border-white/30 font-medium">
+                        Foto kegiatan / lomba terbaru
+                    </span>
+                </div>
+
+                <div class="space-y-1 text-sm md:text-lg text-gray-200">
+                    <p class="font-semibold text-white">Selamat datang di UKM Labbaik.</p>
+                    <p class="text-yellow-100/90 font-light">Bertumbuh, berkarya, dan berkontribusi bersama.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+            <!-- ==========================================
+                 3. SECTION KONTEN UTAMA (SEJARAH & FOTO)
+                 ========================================== -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white/50 p-6 rounded-2xl border border-gray-100">
+                <!-- Kotak Foto Placeholer -->
+                <div class="bg-gray-200/80 rounded-xl aspect-[4/3] flex items-center justify-center relative overflow-hidden group shadow-inner">
+                    <span class="absolute top-3 left-3 bg-gray-600/60 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur-sm">Foto Sejarah</span>
+                    <span class="text-gray-400 font-medium text-lg">Foto</span>
+                </div>
+
+                <!-- Teks Sejarah -->
+                <div class="space-y-4">
+                    <span class="text-[11px] font-bold tracking-widest text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-sm uppercase">TENTANG KAMI</span>
+                    <h3 class="text-2xl font-bold text-gray-900">Sejarah Singkat</h3>
+                    
+                    <div class="space-y-2 text-sm text-gray-600 leading-relaxed">
+                        <p>[Tuliskan awal berdirinya UKM Labbaik di sini.]</p>
+                        <p>[Ceritakan latar belakang dan tujuan organisasi.]</p>
+                        <p>[Tambahkan ringkasan perjalanan UKM hingga kini.]</p>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#" class="inline-flex items-center text-xs font-semibold text-gray-800 bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md transition space-x-1">
+                            <span>Baca Selengkapnya</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 4. SECTION BANNER VISI MISI
+                 ========================================== -->
+            <section class="space-y-6">
+                <!-- Banner Kuning Utama -->
+                <div class="bg-[#FFE885] border border-yellow-300 rounded-full py-4 px-6 text-center shadow-sm">
+                    <h3 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-wide">VISI MISI</h3>
+                    <p class="text-xs md:text-sm text-gray-700 mt-0.5">Visi Misi dari UKM Labbaik yaitu sebagai berikut:</p>
+                </div>
+
+                <!-- 2 Kotak Visi & Misi -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Kotak VISI -->
+                    <div class="bg-[#101726] text-white p-8 rounded-2xl flex flex-col items-center justify-center min-h-[160px] text-center shadow-lg relative">
+                        <h4 class="text-xl font-bold tracking-wider mb-2">VISI</h4>
+                        <!-- 
+                          ===================================================
+                          [SLOT KUSTOM SECTION VISI] 
+                          Masukkan paragraf/list HTML Visi kamu di bawah ini
+                          ===================================================
+                        -->
+                        <div class="text-sm text-gray-300 font-light">
+                            <!-- [Isi Visi kamu bisa ditempatkan di sini] -->
+                        </div>
+                        <!-- [AKHIR SLOT KUSTOM VISI] -->
+                    </div>
+
+                    <!-- Kotak MISI -->
+                    <div class="bg-[#101726] text-white p-8 rounded-2xl flex flex-col items-center justify-center min-h-[160px] text-center shadow-lg relative">
+                        <h4 class="text-xl font-bold tracking-wider mb-2">MISI</h4>
+                        <!-- 
+                          ===================================================
+                          [SLOT KUSTOM SECTION MISI] 
+                          Masukkan paragraf/list HTML Misi kamu di bawah ini
+                          ===================================================
+                        -->
+                        <div class="text-sm text-gray-300 font-light">
+                            <!-- [Isi Misi kamu bisa ditempatkan di sini] -->
+                        </div>
+                        <!-- [AKHIR SLOT KUSTOM MISI] -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 5. SECTION 5 KARTU MENU UTAMA
+                 ========================================== -->
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- Kartu 1: Info UKM -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm mb-3">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <h5 class="font-bold text-gray-900 text-sm mb-1">Info UKM</h5>
+                        <p class="text-xs text-gray-500 leading-snug">Informasi lengkap seputar organisasi, visi, misi, dan struktur kepengurusan.</p>
+                    </div>
+                    <a href="#" class="text-xs font-semibold text-amber-600 hover:text-amber-700 inline-flex items-center space-x-1">
+                        <span>Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Kartu 2: Acara -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-sm mb-3">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h5 class="font-bold text-gray-900 text-sm mb-1">Acara</h5>
+                        <p class="text-xs text-gray-500 leading-snug">Jadwal dan dokumentasi kegiatan, kompetisi, serta event yang diselenggarakan UKM.</p>
+                    </div>
+                    <a href="#" class="text-xs font-semibold text-amber-600 hover:text-amber-700 inline-flex items-center space-x-1">
+                        <span>Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Kartu 3: Keuangan -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-sm mb-3">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <h5 class="font-bold text-gray-900 text-sm mb-1">Keuangan</h5>
+                        <p class="text-xs text-gray-500 leading-snug">Transparansi laporan keuangan, infaq, dan pengelolaan dana kegiatan organisasi.</p>
+                    </div>
+                    <a href="#" class="text-xs font-semibold text-amber-600 hover:text-amber-700 inline-flex items-center space-x-1">
+                        <span>Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Kartu 4: Aspirasi -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-8 h-8 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center text-sm mb-3">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <h5 class="font-bold text-gray-900 text-sm mb-1">Aspirasi</h5>
+                        <p class="text-xs text-gray-500 leading-snug">Sampaikan ide, saran, dan aspirasi Anda untuk kemajuan bersama UKM Labbaik.</p>
+                    </div>
+                    <a href="#" class="text-xs font-semibold text-amber-600 hover:text-amber-700 inline-flex items-center space-x-1">
+                        <span>Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Kartu 5: Dokumentasi -->
+                <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="w-8 h-8 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center text-sm mb-3">
+                            <i class="fa-solid fa-images"></i>
+                        </div>
+                        <h5 class="font-bold text-gray-900 text-sm mb-1">Dokumentasi</h5>
+                        <p class="text-xs text-gray-500 leading-snug">Galeri foto dan video kegiatan serta momen-momen berkesan selama perjalanan UKM.</p>
+                    </div>
+                    <a href="#" class="text-xs font-semibold text-amber-600 hover:text-amber-700 inline-flex items-center space-x-1">
+                        <span>Selengkapnya</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ==========================================
+         6. FOOTER (BAGIAN BAWAH GELAP)
+         ========================================== -->
+    <footer class="bg-[#0B1120] text-gray-300 pt-12 pb-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            
+            <!-- Grid 4 Kolom -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-xs">
+                
+                <!-- Kolom 1: Logo & Alamat -->
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-white text-black flex items-center justify-center font-bold text-[10px] rounded">
+                            L
+                        </div>
+                        <span class="font-bold text-sm text-white">UKM LABBAIK</span>
+                    </div>
+                    <p class="text-gray-400 italic">Berkarya • Berkontribusi • Berdampak</p>
+                    <div class="pt-2 text-gray-400 space-y-1">
+                        <p class="font-semibold text-gray-300 flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Alamat</p>
+                        <p>[Nama gedung / sekretariat]</p>
+                        <p>[Jalan dan nama kampus]</p>
+                        <p>[Kota, provinsi, kode pos]</p>
+                    </div>
+                </div>
+
+                <!-- Kolom 2: Navigasi Cepat -->
+                <div class="space-y-3">
+                    <h6 class="font-bold text-white uppercase tracking-wider text-[11px]">NAVIGASI</h6>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Info UKM</a></li>
+                        <li><a href="#" class="hover:text-white transition">Komparasi</a></li>
+                        <li><a href="#" class="hover:text-white transition">Keuangan</a></li>
+                        <li><a href="#" class="hover:text-white transition">Aspirasi
+                          
